@@ -19,17 +19,17 @@ public class Worker implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	private Double dailyIncame;
+	private Double dailyIncome;
 	
 	public Worker() {
 		
 	}
 
-	public Worker(Long id, String name, Double dailyIncame) {
+	public Worker(Long id, String name, Double dailyIncome) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.dailyIncame = dailyIncame;
+		this.dailyIncome = dailyIncome;
 	}
 
 	public Long getId() {
@@ -48,12 +48,12 @@ public class Worker implements Serializable {
 		this.name = name;
 	}
 
-	public Double getDailyIncame() {
-		return dailyIncame;
+	public Double getDailyIncome() {
+		return dailyIncome;
 	}
 
-	public void setDailyIncame(Double dailyIncame) {
-		this.dailyIncame = dailyIncame;
+	public void setDailyIncome(Double dailyIncome) {
+		this.dailyIncome = dailyIncome;
 	}
 
 	@Override
