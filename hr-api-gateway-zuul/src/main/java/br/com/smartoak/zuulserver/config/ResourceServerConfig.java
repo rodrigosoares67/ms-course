@@ -8,8 +8,6 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
-import com.netflix.ribbon.proxy.annotation.Http.HttpMethod;
-
 @Configuration
 @EnableResourceServer
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
@@ -21,7 +19,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	
 	private static final String[] OPERATOR = { "/hr-worker/**" };
 	
-	private static final String[] ADMIN = { "/hr-payroll/**", "/hr-user/**" };
+	private static final String[] ADMIN = { "/hr-payroll/**", "/hr-user/**", "/actuator/**", "/hr-worker/actuator/**", "/hr-oauth/actuator/**" };
 	
 	@Override
 	public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
